@@ -216,6 +216,8 @@ function setup_autoloader()
 		'Fuel\\Core\\Form'                             => COREPATH.'classes/form.php',
 		'Fuel\\Core\\Form_Instance'                    => COREPATH.'classes/form/instance.php',
 
+		'Fuel\\Core\\FPDF'                         		=> COREPATH.'classes/docpdf/fpdf.php',
+		'Fuel\\Core\\PDF_MC_Table'                  	=> COREPATH.'classes/docpdf/mc_table.php',
 		'Fuel\\Core\\Ftp'                              => COREPATH.'classes/ftp.php',
 		'Fuel\\Core\\FtpConnectionException'           => COREPATH.'classes/ftp.php',
 		'Fuel\\Core\\FtpFileAccessException'           => COREPATH.'classes/ftp.php',
