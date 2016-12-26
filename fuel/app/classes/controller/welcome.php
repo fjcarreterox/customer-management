@@ -27,10 +27,17 @@ class Controller_Welcome extends Controller
 	 * @access  public
 	 * @return  Response
 	 */
-	public function action_index()
-	{
-		return Response::forge(View::forge('welcome/index'));
-	}
+	public function action_index(){
+        $user = Session::get('user');
+        if ($user == "") {
+            return Response::redirect('welcome/login');
+        } else {
+            $q = "SELECT * FROM contratos WHERE `idcliente` =".Session::get('iduser');
+            $data['contracts'] = DB::query($q)->as_assoc()->execute();
+            //$data['contracts'] = $res["_result:protected"];
+            return Response::forge(View::forge('welcome/index',$data));
+        }
+    }
 
 	/**
 	 * A typical "Hello, Bob!" type example.  This uses a Presenter to
@@ -54,4 +61,44 @@ class Controller_Welcome extends Controller
 	{
 		return Response::forge(Presenter::forge('welcome/404'), 404);
 	}
+
+	public function action_login(){
+		if (Input::method() == 'POST'){
+            $q = "SELECT * FROM clientes WHERE `cif_nif` ='".Input::post('username')."'";
+            $user = DB::query($q)->execute();
+			if($user!=NULL){
+				$pass=$user->get('password');
+				/*if(strcmp(md5(Input::post('pass')),$pass)==0){*/
+				if(strcmp(Input::post('pass'),$pass)==0){
+					Session::create();
+					Session::set('user',Input::post('username'));
+					Session::set('iduser',$user->get('id'));
+					Session::set('username',$user->get('nombre'));
+					Session::set('idrol',$user->get('role'));
+					return Response::redirect('/');
+				}
+				else{
+					Session::set_flash('error', 'Error en el acceso');
+					Response::redirect('welcome/login');
+				}
+			}
+			else{
+				//User not found
+				return Response::forge(View::forge('welcome/login'));
+			}
+		}
+		else{
+			//Not a submit process
+			return Response::forge(View::forge('welcome/login'));
+		}
+	}
+
+    public function action_logout(){
+        Session::delete('user');
+        Session::delete('iduser');
+        Session::delete('username');
+        Session::delete('idrol');
+        Session::destroy();
+        return Response::redirect('welcome/login');
+    }
 }
