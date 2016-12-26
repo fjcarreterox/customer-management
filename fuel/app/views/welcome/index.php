@@ -71,10 +71,10 @@
 			<ul>
 				<li><a href="doc/seguridad/<?php echo Session::get('iduser'); ?>" target="_blank">Documento de seguridad</a></li>
 				<li><a href="doc/cesiones" target="_blank">Contratos de cesiones de datos</li>
-				<li><a href="doc/clausulas/E" target="_blank">Cláusulas empleados</li>
-				<li><a href="doc/clausulas/C" target="_blank">Cláusulas clientes</li>
+				<li><a href="doc/clausula/E" target="_blank">Cláusulas empleados</li>
+				<li><a href="doc/clausula/C" target="_blank">Cláusulas clientes</li>
 				<li><a href="doc/coletilla" target="_blank">Coletilla para e-mail</a></li>
-                <li><a href="user/pending" target="_blank"><font style="color: red">Tareas LOPD pendientes (meter observaciones de su fiche)</font></li>
+                <li><a href="user/pending" target="_blank"><font style="color: red">Tareas LOPD pendientes</font></a></li>
 			</ul>
 		</div>
 		<div class="col-md-6">

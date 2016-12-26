@@ -8,23 +8,9 @@ class Controller_Doc extends Controller_Template{
 		$this->template->content = View::forge('doc/index', $data);
 	}
 
-
-    public function action_report(){
-        $this->template->title = "Informes del sistema";
-        $this->template->content = View::forge('doc/report');
-    }
-
-    public function view_all($idc){
-        //TODO: list all the documents for a single customer/contact
-    }
-
     public function action_cert($idcliente){
         $data["name"] = Model_Cliente::find($idcliente)->get('nombre');
         return View::forge('doc/cert',$data)->render();
-    }
-
-    public function action_presupuesto($idcliente){
-        //TODO
     }
 
     public function action_contrato($idcustomer, $idcontract){
@@ -114,20 +100,19 @@ class Controller_Doc extends Controller_Template{
         }
     }
 
-    public function action_clausula($idcliente,$type){
+    public function action_clausula($type){
         //TODO: for customers, employees and providers
         $t=strtoupper($type);
-        $data = array();
-        $data["idc"]=$idcliente;
+        $q = "SELECT * FROM clientes WHERE `id` =".Session::get('iduser');
+        $data['cliente'] = DB::query($q)->as_assoc()->execute();
+        $data['name']=$data['cliente'][0]['nombre'];
+        $data['cif']=$data['cliente'][0]['cif_nif'];
+        $data['dir']=$data['cliente'][0]['direccion'].", ".$data['cliente'][0]['cpostal'].", ".$data['cliente'][0]['loc'].", en la provincia de ".$data['cliente'][0]['prov'];
         switch($t){
             case 'E':
-                //TODO
-                //return \Fuel\Core\Response::redirect('clientes/clausula_empleados/'.$idcliente);
-                $data['trab'] = Model_Personal::find('all',array('where'=>array('idcliente'=>$idcliente,'relacion'=>4)));
+                $q = "SELECT * FROM personals WHERE `idcliente` =".Session::get('iduser')." AND relacion=4";
+                $data['trab'] = DB::query($q)->as_assoc()->execute();
                 return View::forge('doc/clause/employee',$data)->render();
-                break;
-            case 'P':
-                return View::forge('doc/clause/provider',$data)->render();
                 break;
             case 'C':
                 return View::forge('doc/clause/customer',$data)->render();
