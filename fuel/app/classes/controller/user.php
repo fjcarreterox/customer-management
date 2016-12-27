@@ -27,4 +27,16 @@ class Controller_User extends Controller_Template{
         $this->template->title = "Tareas pendientes";
         $this->template->content = View::forge('user/pending',$data);
     }
+
+    public function action_perfil(){
+        if(Session::get('idrol')==3 && Session::get('iduser')!=null){
+            return \Fuel\Core\Response::redirect('welcome/not_found');
+        }
+        $q = "SELECT * FROM clientes WHERE `id` =".Session::get('iduser');
+        $data['cliente'] = DB::query($q)->as_assoc()->execute();
+        $data["cliente"] = $data['cliente'][0];
+        //return View::forge('user/pending',$data)->render();
+        $this->template->title = "Ficha de cliente";
+        $this->template->content = View::forge('user/perfil',$data);
+    }
 }

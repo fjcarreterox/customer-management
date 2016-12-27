@@ -93,7 +93,7 @@
 		<div class="col-md-6">
 			<h2>Mi cuenta de cliente</h2>
 			<ul>
-				<li><a href="">Datos identificativos</a></li>
+				<li><a href="user/perfil">Datos identificativos</a></li>
 				<li><a href="ficheros/viewall/<?php echo Session::get('iduser');?>">Ficheros de datos inscritos en la AEPD.</a></li>
 				<li><a href="user/new_pass">Cambiar mi contraseña</a></li>
                 <li><a href="user/new_pass">Notificar a AGDATA nuevos datos o ficheros</a> <span class="glyphicon glyphicon-envelope"></span></li>
