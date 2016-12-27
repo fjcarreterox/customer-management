@@ -2,7 +2,7 @@
 $pdf = new PDF_MC_Table();
 $pdf->AddFont('Arial','','arial.php');
 $title = 'CLAÚSULA LEGAL PARA EMPLEADOS';
-$pdf->SetTitle($title);
+$pdf->SetTitle(utf8_decode($title));
 $pdf->SetAuthor('Análisis y gestión de datos S.L.');
 $pdf->SetMargins(20,6,20);
 $pdf->AliasNbPages();
