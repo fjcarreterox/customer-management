@@ -5,12 +5,12 @@
     <tbody>
     <tr class="text-center">
         <td>Categoría:</td>
-        <td><?php echo $cliente["tipo"]; ?></td>
+        <td><?php echo $tipo; ?></td>
     </tr>
-    <tr class="text-center">
+    <!--<tr class="text-center">
         <td>Estado:</td>
-        <td><?php echo $cliente["estado"]; ?></td>
-    </tr>
+        <td><?php /*echo $cliente["estado"];*/ ?></td>
+    </tr>-->
     <tr class="text-center">
         <td>CIF / NIF:</td>
         <td><?php if($cliente["cif_nif"]!=''){echo $cliente["cif_nif"];}else{echo '<span class="red">-- FALTA NIF/CIF --</span>';} ?></td>

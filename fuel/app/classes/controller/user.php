@@ -35,7 +35,12 @@ class Controller_User extends Controller_Template{
         $q = "SELECT * FROM clientes WHERE `id` =".Session::get('iduser');
         $data['cliente'] = DB::query($q)->as_assoc()->execute();
         $data["cliente"] = $data['cliente'][0];
-        //return View::forge('user/pending',$data)->render();
+
+        $q = "SELECT tipo FROM tipo_clientes WHERE `id` =".$data["cliente"]["tipo"];
+        $data['tipo'] = DB::query($q)->as_assoc()->execute();
+        $data["tipo"] = $data['tipo'][0]["tipo"];
+
+        ;
         $this->template->title = "Ficha de cliente";
         $this->template->content = View::forge('user/perfil',$data);
     }
