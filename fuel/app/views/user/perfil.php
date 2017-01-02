@@ -4,14 +4,6 @@
     <thead></thead>
     <tbody>
     <tr class="text-center">
-        <td>Categoría:</td>
-        <td><?php echo $tipo; ?></td>
-    </tr>
-    <!--<tr class="text-center">
-        <td>Estado:</td>
-        <td><?php /*echo $cliente["estado"];*/ ?></td>
-    </tr>-->
-    <tr class="text-center">
         <td>CIF / NIF:</td>
         <td><?php if($cliente["cif_nif"]!=''){echo $cliente["cif_nif"];}else{echo '<span class="red">-- FALTA NIF/CIF --</span>';} ?></td>
     </tr>
@@ -32,7 +24,7 @@
         <td><?php if($cliente["email"]!=''){echo $cliente["email"];}else{echo '<span class="red">-- FALTA E-MAIL --</span>';} ?></td>
     </tr>
     <tr class="text-center">
-        <td>Actividad prioncipal:</td>
+        <td>Actividad principal:</td>
         <td><?php echo $cliente["actividad"]; ?></td>
     </tr>
     <tr class="text-center">
@@ -43,6 +35,26 @@
         <td>Núm. trabajadores:</td>
         <td><?php echo $cliente["num_trab"];?></td>
     </tr>
+    </tbody>
+</table>
+<br/>
+<h3>Listado de trabajadores</h3>
+<table class="table table-striped table-bordered table-hover table-responsive">
+    <thead>
+    <tr class="text-center">
+        <td><strong>Nombre</strong></td>
+        <td><strong>DNI</strong></td>
+        <td><strong>Cargo o función</strong></td>
+    </tr>
+    </thead>
+    <tbody>
+    <?php foreach($contactos as $c): ?>
+        <tr>
+            <td><?php echo $c["nombre"]; ?></td>
+            <td><?php echo $c["dni"]; ?></td>
+            <td><?php echo $c["cargofuncion"]; ?></td>
+        </tr>
+    <?php endforeach; ?>
     </tbody>
 </table>
 <br/>

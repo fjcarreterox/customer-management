@@ -17,20 +17,20 @@ class Controller_User extends Controller_Template{
     }
 
     public function action_pending(){
-        if(Session::get('idrol')==3 && Session::get('iduser')!=null){
-            return \Fuel\Core\Response::redirect('welcome/not_found');
+        if(Session::get('iduser')==null){
+            return \Fuel\Core\Response::redirect('welcome/login');
         }
         $q = "SELECT * FROM clientes WHERE `id` =".Session::get('iduser');
         $data['cliente'] = DB::query($q)->as_assoc()->execute();
         $data["pending"] = $data['cliente'][0]["pending"];
-        //return View::forge('user/pending',$data)->render();
+
         $this->template->title = "Tareas pendientes";
         $this->template->content = View::forge('user/pending',$data);
     }
 
     public function action_perfil(){
-        if(Session::get('idrol')==3 && Session::get('iduser')!=null){
-            return \Fuel\Core\Response::redirect('welcome/not_found');
+        if(Session::get('iduser')==null){
+            return \Fuel\Core\Response::redirect('welcome/login');
         }
         $q = "SELECT * FROM clientes WHERE `id` =".Session::get('iduser');
         $data['cliente'] = DB::query($q)->as_assoc()->execute();
@@ -40,8 +40,10 @@ class Controller_User extends Controller_Template{
         $data['tipo'] = DB::query($q)->as_assoc()->execute();
         $data["tipo"] = $data['tipo'][0]["tipo"];
 
-        ;
-        $this->template->title = "Ficha de cliente";
+        $q = "SELECT * FROM personals WHERE `idcliente` =".Session::get('iduser');
+        $data['contactos'] = DB::query($q)->as_assoc()->execute();
+        //$data["contactos"]
+        $this->template->title = "Datos básicos del cliente";
         $this->template->content = View::forge('user/perfil',$data);
     }
 }
