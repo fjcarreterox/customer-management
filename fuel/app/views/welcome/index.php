@@ -78,12 +78,12 @@
 			</ul>
 		</div>
 		<div class="col-md-6">
-			<h2>Contratos y facturas</h2>
+			<h2>Contratos <!--y facturas--></h2>
 			<ul>
 				<?php
 				//print_r($contracts);
 				foreach($contracts as $c){
-					echo '<li><a href="contratos/view/">Contrato nº '.$c['id'].' (Firmado el '.date_conv($c['fecha_firma']).')</a></li>';
+					echo '<li><a href="user/contrato/'.$c['id'].'" target="_blank">Contrato nº '.$c['id'].' (Firmado el '.date_conv($c['fecha_firma']).')</a></li>';
 				}
 				?>
 			</ul>
