@@ -69,12 +69,12 @@
 		<div class="col-md-6">
 			<h2>Documentación LOPD</h2>
 			<ul>
-				<li><a href="doc/seguridad/<?php echo Session::get('iduser'); ?>" target="_blank">Documento de seguridad</a></li>
-				<li><a href="doc/cesiones" target="_blank">Contratos de cesiones de datos</li>
-				<li><a href="doc/clausula/E" target="_blank">Cláusulas empleados</li>
-				<li><a href="doc/clausula/C" target="_blank">Cláusulas clientes</li>
-				<li><a href="doc/coletilla" target="_blank">Coletilla para e-mail</a></li>
-                <li><a href="user/pending" target="_blank"><font style="color: red">Tareas LOPD pendientes</font></a></li>
+				<li><span class="glyphicon glyphicon-file"></span> <a href="doc/seguridad/<?php echo Session::get('iduser'); ?>" target="_blank">Documento de seguridad</a></li>
+				<li><span class="glyphicon glyphicon-file"></span> <a href="doc/cesiones" target="_blank">Contratos de cesiones de datos</a></li>
+				<li><span class="glyphicon glyphicon-file"></span> <a href="doc/clausula/E" target="_blank">Cláusulas empleados</a></li>
+				<li><span class="glyphicon glyphicon-file"></span> <a href="doc/clausula/C" target="_blank">Cláusulas clientes</a></li>
+				<li><span class="glyphicon glyphicon-file"></span> <a href="doc/coletilla" target="_blank">Coletilla para e-mail</a></li>
+                <li><span class="glyphicon glyphicon-pushpin"></span> <a href="user/pending" target="_blank"><font style="color: red">Tareas LOPD pendientes</font></a></li>
 			</ul>
 		</div>
 		<div class="col-md-6">
@@ -83,7 +83,7 @@
 				<?php
 				//print_r($contracts);
 				foreach($contracts as $c){
-					echo '<li><a href="user/contrato/'.$c['id'].'" target="_blank">Contrato nº '.$c['id'].' (Firmado el '.date_conv($c['fecha_firma']).')</a></li>';
+					echo '<li><span class="glyphicon glyphicon-briefcase"></span> <a href="user/contrato/'.$c['id'].'" target="_blank">Contrato nº '.$c['id'].' (Firmado el '.date_conv($c['fecha_firma']).')</a></li>';
 				}
 				?>
 			</ul>
@@ -93,18 +93,17 @@
 		<div class="col-md-6">
 			<h2>Mi cuenta de cliente</h2>
 			<ul>
-				<li><a href="user/perfil">Datos identificativos</a></li>
-				<li><a href="ficheros/viewall/<?php echo Session::get('iduser');?>">Ficheros de datos inscritos en la AEPD.</a></li>
-				<li><a href="user/new_pass">Cambiar mi contraseña</a></li>
-                <li><a href="user/new_pass">Notificar a AGDATA nuevos datos o ficheros</a> <span class="glyphicon glyphicon-envelope"></span></li>
+				<li><span class="glyphicon glyphicon-user"></span> <a href="user/perfil">Datos identificativos</a></li>
+				<li><span class="glyphicon glyphicon-pencil"></span> <a href="user/files">Ficheros de datos declarados a la Agencia</a></li>
+				<!--<li><a href="user/new_pass">Cambiar mi contraseña</a></li>-->
 			</ul>
 		</div>
 		<div class="col-md-6">
-			<h2>Más sobre A.G.DATA</h2>
+			<h2>Conozca A.G.DATA</h2>
 			<ul>
-				<li>Visite nuestro portal web <a href="http://www.agdata.es" target="_blank">www.agdata.es</a></li>
-				<li><a href="clientes/contacto/<?php echo Session::get('iduser');?>">Realizar consulta LOPD a AGDATA</a></li>
-				<li>Redes sociales: BLOG FB TW Lin</li>
+				<li><span class="glyphicon glyphicon-link"></span> Visite nuestra web <a href="http://www.agdata.es" target="_blank" title="Se abre en ventana nueva">www.agdata.es</a></li>
+				<li><span class="glyphicon glyphicon-bullhorn"></span> Redes sociales: BLOG FB TW Lin</li>
+				<li><span class="glyphicon glyphicon-envelope"></span> <a href="mailto:clienteslopd@agdata.es?subject=Consulta LOPD">Realizar consulta LOPD a AGDATA</a></li>
 			</ul>
 		</div>
 	</div>
