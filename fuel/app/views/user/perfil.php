@@ -4,6 +4,10 @@
     <thead></thead>
     <tbody>
     <tr class="text-center">
+        <td>Razón social:</td>
+        <td><strong><?php echo $cliente["nombre"]; ?></strong></td>
+    </tr>
+    <tr class="text-center">
         <td>CIF / NIF:</td>
         <td><?php if($cliente["cif_nif"]!=''){echo $cliente["cif_nif"];}else{echo '<span class="red">-- FALTA NIF/CIF --</span>';} ?></td>
     </tr>
@@ -58,5 +62,5 @@
     </tbody>
 </table>
 <br/>
-<p>Por favor, emplee <a href="" target="_blank" title="Se abre en ventana nueva...">este formulario</a> para poder
+<p>Por favor, escríbanos a <a href="mailto:clienteslopd@agdata.es?subject=Comunicación o modificación de datos identificativos">esta dirección</a> para poder
     comunicar cualquier cambio o errata en estos datos a A.G.DATA S.L.</p>

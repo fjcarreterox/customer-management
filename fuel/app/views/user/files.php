@@ -35,7 +35,7 @@
                 ?></td>
             <td><?php echo $f["soporte"]; ?></td>
             <td><?php if($f["cesion"]){echo "SÍ";}else{echo "NO";}; ?></td>
-            <td><?php if($f["inscrito"]){echo "SÍ (".date_conv($f->fecha).")";}else{echo "NO";}; ?></td>
+            <td><?php if($f["inscrito"]){echo "SÍ (".date_conv($f["fecha"]).")";}else{echo "NO";}; ?></td>
         </tr>
     <?php endforeach; ?>
     </tbody>
