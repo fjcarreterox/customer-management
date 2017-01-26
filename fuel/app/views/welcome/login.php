@@ -14,12 +14,16 @@
         #logo img {
 			width:70%;
         }
+        .jumbotron{
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
 	</style>
 </head>
 <body>
 <header>
 	<div class="container">
-		<div id="logo"><?php echo \Fuel\Core\Asset::img('customers.jpg');?></div>
+		<div id="logo"><?php echo \Fuel\Core\Asset::img('cabecera.jpg');?></div>
 	</div>
 </header>
 <div class="container">
@@ -28,7 +32,7 @@
         <p>¡Bienvenido a su zona de cliente!</p>
         <p>Por favor, identifíquese para acceder a su Área interna.</p>-->
 		<?php echo render('welcome/_form_login'); ?>
-		<small>¿Aún no tiene usuario? Escríbanos a <a href="mailto:clienteslopd@agdata.es?subject=Solicitud de claves de acceso">esta dirección</a> para solicitarlo</small>
+		<small>¿Aún no tiene sus credenciales? Escríbanos a <a href="mailto:clienteslopd@agdata.es?subject=Solicitud de claves de acceso">esta dirección</a> para solicitarlas.</small>
 	</div>
 	<hr/>
 	<footer>

@@ -6,7 +6,6 @@
         <td><strong>Tipo</strong></td>
         <td><strong>Nivel</strong></td>
         <td><strong>Soporte</strong></td>
-        <td><strong>Cedido a terceros</strong></td>
         <td><strong>Inscrito en la Agencia</strong></td>
     </tr>
     </thead>
@@ -34,12 +33,11 @@
                 }
                 ?></td>
             <td><?php echo $f["soporte"]; ?></td>
-            <td><?php if($f["cesion"]){echo "SÍ";}else{echo "NO";}; ?></td>
             <td><?php if($f["inscrito"]){echo "SÍ (".date_conv($f["fecha"]).")";}else{echo "NO";}; ?></td>
         </tr>
     <?php endforeach; ?>
     </tbody>
 </table>
 <br/>
-<p>Por favor, escríbanos a <a href="mailto:clienteslopd@agdata.es?subject=Modificación o alta de ficheros">esta dirección</a> para poder
-    comunicar cualquier cambio o errata en estos ficheros de datos a A.G.DATA S.L.</p>
+<p>En caso de que traten datos distintos de los declarados, o si éstos han sido modificados o suprimidos, por favor, comuníquenoslo <a href="mailto:clienteslopd@agdata.es?subject=Modificación o alta de ficheros">aquí</a>.</p>
+<p>Para actualizar la fecha de inscripción de sus ficheros, rogamos nos remita por mail a <a href="mailto:clienteslopd@agdata.es">clienteslopd@agdata.es</a> la carta que les envía la Agencia de Protección de Datos.</p>

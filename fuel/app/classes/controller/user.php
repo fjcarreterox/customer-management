@@ -24,7 +24,7 @@ class Controller_User extends Controller_Template{
         $data['cliente'] = DB::query($q)->as_assoc()->execute();
         $data["pending"] = $data['cliente'][0]["pending"];
 
-        $this->template->title = "Tareas pendientes";
+        $this->template->title = "Tareas LOPD pendientes de realizar";
         $this->template->content = View::forge('user/pending',$data);
     }
 
@@ -111,7 +111,7 @@ class Controller_User extends Controller_Template{
         $data["nombre"] = DB::query($q)->as_assoc()->execute();
         $data["nombre"] = $data["nombre"][0]["nombre"];
 
-        $this->template->title = "Ficheros de datos del cliente seleccionado";
+        $this->template->title = "Ficheros de datos declarados a la Agencia";
         $this->template->content = View::forge('user/files', $data);
     }
 }

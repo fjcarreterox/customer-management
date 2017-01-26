@@ -62,5 +62,4 @@
     </tbody>
 </table>
 <br/>
-<p>Por favor, escríbanos a <a href="mailto:clienteslopd@agdata.es?subject=Comunicación o modificación de datos identificativos">esta dirección</a> para poder
-    comunicar cualquier cambio o errata en estos datos a A.G.DATA S.L.</p>
+<p>Si sus datos están incompletos o han cambiado, por favor <a href="mailto:clienteslopd@agdata.es?subject=Comunicación o modificación de datos identificativos">siga este enlace</a> para comunicárnoslo. Gracias</p>

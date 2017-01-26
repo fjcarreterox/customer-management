@@ -10,7 +10,7 @@
 		</div>
 		<div class="form-group">
 			<label class='control-label'>&nbsp;</label>
-			<?php echo Form::button('submit', 'Área interna de cliente <span class="glyphicon glyphicon-chevron-right"></span><span class="glyphicon glyphicon-chevron-right"></span>', array('class' => 'btn btn-primary','type'=>'submit')); ?>
+			<?php echo Form::button('submit', 'Acceder <span class="glyphicon glyphicon-chevron-right"></span><span class="glyphicon glyphicon-chevron-right"></span>', array('class' => 'btn btn-primary','type'=>'submit')); ?>
 		</div>
 	</fieldset>
 <?php echo Form::close(); ?>

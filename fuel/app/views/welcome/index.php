@@ -105,7 +105,7 @@
 				<li><span class="glyphicon glyphicon-bullhorn"></span> Redes sociales:
                     <img src="/public/assets/img/blog-icon.png" style="width: 40px;"/>
                     <a href="https://www.facebook.com/AGData.es" title="Se abre en ventana nueva..." target="_blank"><img src="/public/assets/img/facebook-icon.png" style="width: 40px;"/></a>
-                    <a href="https://twitter.com/agdata" title="Se abre en ventana nueva..." target="_blank"><img src="/public/assets/img/twitter-icon.png" style="width: 40px;"/></a>
+                    <a href="https://twitter.com/AGDATA1" title="Se abre en ventana nueva..." target="_blank"><img src="/public/assets/img/twitter-icon.png" style="width: 40px;"/></a>
                     <a href="https://www.linkedin.com/company/9318885?trk=tyah&trkInfo=clickedVertical%3Acompany%2CclickedEntityId%3A9318885%2Cidx%3A2-3-4%2CtarId%3A1485294868748%2Ctas%3Aagdata" title="Se abre en ventana nueva..." target="_blank"><img src="/public/assets/img/linkedin-icon.png" style="width: 36px;"/></a></li>
 				<li><span class="glyphicon glyphicon-envelope"></span> <a href="mailto:clienteslopd@agdata.es?subject=Consulta LOPD">Realizar consulta LOPD a AGDATA</a></li>
 			</ul>

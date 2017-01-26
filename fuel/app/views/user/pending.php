@@ -1,5 +1,4 @@
-<p>Estas son las tareas pendinentes que A.G.DATA ha identificado y necesita de su colaboración
-    para poder completarlas:</p>
+<p>Para tener su documentación LOPD actualizada, deben completar las siguientes tareas:</p>
 <ol>
     <?php
     $items = explode("\n",$pending);
@@ -9,5 +8,4 @@
     ?>
 </ol>
 <br/>
-<p>Por favor, emplee <a href="" target="_blank" title="Se abre en ventana nueva...">este formulario</a> para poder
-    comunicarse con A.G.DATA S.L.</p>
+<p>Para comunicarnos la información que le solicitamos, por favor, emplee esta <a href="mailto:clienteslopd@agdata.es">dirección de e-mail</a>.</p>
