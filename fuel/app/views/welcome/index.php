@@ -74,7 +74,7 @@
 				<li><span class="glyphicon glyphicon-file"></span> <a href="doc/clausula/E" target="_blank">Cláusulas empleados</a></li>
 				<li><span class="glyphicon glyphicon-file"></span> <a href="doc/clausula/C" target="_blank">Cláusulas clientes</a></li>
 				<li><span class="glyphicon glyphicon-file"></span> <a href="doc/coletilla" target="_blank">Coletilla para e-mail</a></li>
-                <li><span class="glyphicon glyphicon-pushpin"></span> <a href="user/pending" target="_blank"><font style="color: red">Tareas LOPD pendientes</font></a></li>
+                <li><span class="glyphicon glyphicon-pushpin"></span> <a href="user/pending"><font style="color: red">Tareas LOPD pendientes</font></a></li>
 			</ul>
 		</div>
 		<div class="col-md-6">

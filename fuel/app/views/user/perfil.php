@@ -63,3 +63,4 @@
 </table>
 <br/>
 <p>Si sus datos están incompletos o han cambiado, por favor <a href="mailto:clienteslopd@agdata.es?subject=Comunicación o modificación de datos identificativos">siga este enlace</a> para comunicárnoslo. Gracias</p>
+<?php echo \Fuel\Core\Html::anchor("/","<span class='glyphicon glyphicon-backward'></span> Volver al menú principal",array("class"=>"btn btn-danger"))?>
