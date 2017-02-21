@@ -4,12 +4,8 @@
 	<meta charset="utf-8">
 	<title><?php echo $title; ?></title>
 	<?php echo Asset::css('bootstrap.css'); ?>
-    <?php /*echo Asset::js('jquery.js');*/ ?>
-    <?php /*echo Asset::js('jquery.validate.min.js');*/ ?>
+    <?php echo Asset::js('jquery.js'); ?>
     <?php echo Asset::js('bootstrap.min.js'); ?>
-    <?php /*echo Asset::js('iban.js');*/ ?>
-    <?php /*echo Asset::js('main.js');*/ ?>
-    <?php /*echo Asset::js('dninif.js');*/ ?>
     <?php echo Asset::css('main.css'); ?>
     <link href='https://fonts.googleapis.com/css?family=Armata' rel='stylesheet' type='text/css'>
 </head>
@@ -32,7 +28,7 @@ else{
 			</a>
 			<h2>Área de gestión interna</h2>
 			<br/>
-			<h3><?php echo $title; ?></h3>
+			<h3><strong><?php echo $title; ?></strong></h3>
 			<hr/>
 <?php if (Session::get_flash('success')): ?>
 			<div class="alert alert-success">

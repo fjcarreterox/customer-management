@@ -191,13 +191,10 @@ if(isset($servicios_data[2])) {
         }
     }
     $pdf->Ln(5);
-}
-foreach($servicios_data as $s){
-    if($s["precio"]!=0){
+    if($servicios_data[2]["precio"]!=0){
         $pdf->MultiCell(0, 6, utf8_decode('Los precios antes señalados serán revisados en las sucesivas prórrogas que se produzcan en función de las variaciones del IPC anuales publicadas por el INE.'), 0);
-        $pdf->Ln(5);
     }
-    break;
+    $pdf->Ln(5);
 }
 
 $pdf->SetFont('Arial','B',12);

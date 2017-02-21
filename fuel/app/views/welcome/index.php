@@ -69,7 +69,7 @@
 		<div class="col-md-6">
 			<h2>Documentación LOPD</h2>
 			<ul>
-				<li><span class="glyphicon glyphicon-file"></span> <a href="doc/seguridad/<?php echo Session::get('iduser'); ?>" target="_blank">Documento de seguridad</a></li>
+				<li><span class="glyphicon glyphicon-file"></span> <a href="doc/seguridad" target="_blank">Documento de seguridad</a></li>
 				<li><span class="glyphicon glyphicon-file"></span> <a href="doc/cesiones" target="_blank">Contratos de cesiones de datos</a></li>
 				<li><span class="glyphicon glyphicon-file"></span> <a href="doc/clausula/E" target="_blank">Cláusulas empleados</a></li>
 				<li><span class="glyphicon glyphicon-file"></span> <a href="doc/clausula/C" target="_blank">Cláusulas clientes</a></li>
@@ -103,7 +103,7 @@
 			<ul>
 				<li><span class="glyphicon glyphicon-link"></span> Visite nuestra web <a href="http://www.agdata.es" target="_blank" title="Se abre en ventana nueva">www.agdata.es</a></li>
 				<li><span class="glyphicon glyphicon-bullhorn"></span> Redes sociales:
-                    <img src="/public/assets/img/blog-icon.png" style="width: 40px;"/>
+                    <!--<img src="/public/assets/img/blog-icon.png" style="width: 40px;"/>-->
                     <a href="https://www.facebook.com/AGData.es" title="Se abre en ventana nueva..." target="_blank"><img src="/public/assets/img/facebook-icon.png" style="width: 40px;"/></a>
                     <a href="https://twitter.com/AGDATA1" title="Se abre en ventana nueva..." target="_blank"><img src="/public/assets/img/twitter-icon.png" style="width: 40px;"/></a>
                     <a href="https://www.linkedin.com/company/9318885?trk=tyah&trkInfo=clickedVertical%3Acompany%2CclickedEntityId%3A9318885%2Cidx%3A2-3-4%2CtarId%3A1485294868748%2Ctas%3Aagdata" title="Se abre en ventana nueva..." target="_blank"><img src="/public/assets/img/linkedin-icon.png" style="width: 36px;"/></a></li>
