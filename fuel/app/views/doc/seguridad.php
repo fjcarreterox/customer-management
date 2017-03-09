@@ -539,9 +539,9 @@ $pdf->SetWidths(array(70,40,30,30));
 $pdf->SetAligns(array('C','C','C','C'));
 $pdf->Row(array("Nombre y Apellidos","Cargo","Fecha alta","Fecha baja"));
 $falta="";
-if(strcmp($rep_seg["fecha_alta"],"0000-00-00")!=0){$falta=date_conv($rep_seg["fecha_alta"]);}
+if(strcmp($rep_seg["fecha_alta"],"0000-00-00")!=0 && $rep_seg["fecha_alta"]!=""){$falta=date_conv($rep_seg["fecha_alta"]);}
 $fbaja="";
-if(strcmp($rep_seg["fecha_baja"],"0000-00-00")!=0){$fbaja=date_conv($rep_seg["fecha_baja"]);}
+if(strcmp($rep_seg["fecha_baja"],"0000-00-00")!=0 && $rep_seg["fecha_baja"]!=""){$fbaja=date_conv($rep_seg["fecha_baja"]);}
 $pdf->Row(array(html_entity_decode($rep_seg["nombre"]),html_entity_decode($rep_seg["cargofuncion"]),$falta,$fbaja));
 $pdf->Row(array("","","",""));
 $pdf->Row(array("","","",""));

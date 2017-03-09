@@ -90,7 +90,7 @@ $pdf->Ln(10);
 $periodo_ops = array(12=>'mensualmente',4=>'trimestral',2=>'semestralmente',1=>'anualmente',0=>'Pago único');
 
 foreach($services as $s):
-    $q = "SELECT nombre FROM Servicios WHERE `id` =".$s["idtipo_servicio"];
+    $q = "SELECT nombre FROM servicios WHERE `id` =".$s["idtipo_servicio"];
     $nombre = DB::query($q)->as_assoc()->execute();
     $num_cuotas=1;
     if($s["periodicidad"] != 0){
