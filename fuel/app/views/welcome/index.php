@@ -63,7 +63,7 @@
 	<div class="jumbotron">
 		<h1>AGDATA S.L.</h1>
 		<p>Bienvenido a su área privada de gestión, <b><?php echo Session::get('username');?></b>.</p>
-		<p><a class="btn btn-danger" href="welcome/logout">Salir de su área privada <span class="glyphicon glyphicon-log-out"></span></a></p>
+		<p style="text-align: end"><a class="btn btn-danger" href="welcome/logout">Salir de su área privada <span class="glyphicon glyphicon-log-out"></span></a></p>
 	</div>
 	<div class="row">
 		<div class="col-md-6">
@@ -83,7 +83,7 @@
 				<?php
 				//print_r($contracts);
 				foreach($contracts as $c){
-					echo '<li><span class="glyphicon glyphicon-briefcase"></span> <a href="user/contrato/'.$c['id'].'" target="_blank">Contrato nº '.$c['id'].' (Firmado el '.date_conv($c['fecha_firma']).')</a></li>';
+					echo '<li><span class="glyphicon glyphicon-briefcase"></span> <a href="user/contrato/'.$c['id'].'" target="_blank">Contrato LOPD con A.G.DATA ('.date_conv($c['fecha_firma']).')</a></li>';
 				}
 				?>
 			</ul>

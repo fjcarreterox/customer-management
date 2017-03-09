@@ -1,4 +1,5 @@
-<p>A continuación le presentamos sus contratos de cesión de datos que están actualmente en vigor:</p>
+<p>Estos son los contratos que deben tener firmados con terceros por la comunicación de datos de sus ficheros.</p>
+<p>Cuando surgan nuevos cesionarios de datos o cambien los actuales, rogamos nos lo comuniquen <a href="mailto:clienteslopd@agdata.es">aquí</a> para elaborarles los contratos de cesión necesarios.</p>
 <br/>
 <table class="table table-striped table-bordered table-hover">
     <thead>
