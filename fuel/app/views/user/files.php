@@ -39,6 +39,6 @@
     </tbody>
 </table>
 <br/>
-<p>En caso de que traten datos distintos de los declarados, o si éstos han sido modificados o suprimidos, por favor, comuníquenoslo <a href="mailto:clienteslopd@agdata.es?subject=Modificación o alta de ficheros">aquí</a>.</p>
+<p><strong>En caso de que traten datos distintos de los declarados, o si éstos han sido modificados o suprimidos, por favor, comuníquenoslo <a href="mailto:clienteslopd@agdata.es?subject=Modificación o alta de ficheros">aquí</a>.</strong></p>
 <p>Para actualizar la fecha de inscripción de sus ficheros, rogamos nos remita por mail a <a href="mailto:clienteslopd@agdata.es">clienteslopd@agdata.es</a> la carta que les envía la Agencia de Protección de Datos.</p>
 <?php echo \Fuel\Core\Html::anchor("/","<span class='glyphicon glyphicon-backward'></span> Volver al menú principal",array("class"=>"btn btn-danger"))?>

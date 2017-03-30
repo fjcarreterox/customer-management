@@ -32,11 +32,11 @@
         <p>¡Bienvenido a su zona de cliente!</p>
         <p>Por favor, identifíquese para acceder a su Área interna.</p>-->
 		<?php echo render('welcome/_form_login'); ?>
-		<small>¿Aún no tiene sus credenciales? Escríbanos a <a href="mailto:clienteslopd@agdata.es?subject=Solicitud de claves de acceso">esta dirección</a> para solicitarlas.</small>
+		<small>¿Aún no tiene sus credenciales? Solicítelas <a href="mailto:clienteslopd@agdata.es?subject=Solicitud de claves de acceso">aquí</a>.</small>
 	</div>
 	<hr/>
 	<footer>
-		<p class="pull-right">Sitio creado por A.G.Data S.L.</p>
+		<p class="pull-right">Sitio creado por <strong>Análisis y Gestión de Datos SL</strong></p>
 	</footer>
 </div>
 </body>

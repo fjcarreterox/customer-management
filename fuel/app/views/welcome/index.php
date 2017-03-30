@@ -67,6 +67,20 @@
 	</div>
 	<div class="row">
 		<div class="col-md-6">
+			<h2>Mi cuenta de cliente</h2>
+			<ul>
+				<li><span class="glyphicon glyphicon-user"></span> <a href="user/perfil">Datos identificativos</a></li>
+				<li><span class="glyphicon glyphicon-pencil"></span> <a href="user/files">Ficheros de datos declarados a la Agencia</a></li>
+				<!--<li><a href="user/new_pass">Cambiar mi contraseña</a></li>-->
+					<?php
+					//print_r($contracts);
+					foreach($contracts as $c){
+						echo '<li><span class="glyphicon glyphicon-briefcase"></span> <a href="user/contrato/'.$c['id'].'" target="_blank">Contrato LOPD con A.G.DATA ('.date_conv($c['fecha_firma']).')</a></li>';
+					}
+					?>
+			</ul>
+		</div>
+		<div class="col-md-6">
 			<h2>Documentación LOPD</h2>
 			<ul>
 				<li><span class="glyphicon glyphicon-file"></span> <a href="doc/seguridad" target="_blank">Documento de seguridad</a></li>
@@ -74,30 +88,11 @@
 				<li><span class="glyphicon glyphicon-file"></span> <a href="doc/clausula/E" target="_blank">Cláusulas empleados</a></li>
 				<li><span class="glyphicon glyphicon-file"></span> <a href="doc/clausula/C" target="_blank">Cláusulas clientes</a></li>
 				<li><span class="glyphicon glyphicon-file"></span> <a href="doc/coletilla" target="_blank">Coletilla para e-mail</a></li>
-                <li><span class="glyphicon glyphicon-pushpin"></span> <a href="user/pending"><font style="color: red">Tareas LOPD pendientes</font></a></li>
-			</ul>
-		</div>
-		<div class="col-md-6">
-			<h2>Contratos <!--y facturas--></h2>
-			<ul>
-				<?php
-				//print_r($contracts);
-				foreach($contracts as $c){
-					echo '<li><span class="glyphicon glyphicon-briefcase"></span> <a href="user/contrato/'.$c['id'].'" target="_blank">Contrato LOPD con A.G.DATA ('.date_conv($c['fecha_firma']).')</a></li>';
-				}
-				?>
+
 			</ul>
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-md-6">
-			<h2>Mi cuenta de cliente</h2>
-			<ul>
-				<li><span class="glyphicon glyphicon-user"></span> <a href="user/perfil">Datos identificativos</a></li>
-				<li><span class="glyphicon glyphicon-pencil"></span> <a href="user/files">Ficheros de datos declarados a la Agencia</a></li>
-				<!--<li><a href="user/new_pass">Cambiar mi contraseña</a></li>-->
-			</ul>
-		</div>
 		<div class="col-md-6">
 			<h2>Conozca A.G.DATA</h2>
 			<ul>
@@ -108,6 +103,12 @@
                     <a href="https://twitter.com/AGDATA1" title="Se abre en ventana nueva..." target="_blank"><img src="/public/assets/img/twitter-icon.png" style="width: 40px;"/></a>
                     <a href="https://www.linkedin.com/company/9318885?trk=tyah&trkInfo=clickedVertical%3Acompany%2CclickedEntityId%3A9318885%2Cidx%3A2-3-4%2CtarId%3A1485294868748%2Ctas%3Aagdata" title="Se abre en ventana nueva..." target="_blank"><img src="/public/assets/img/linkedin-icon.png" style="width: 36px;"/></a></li>
 				<li><span class="glyphicon glyphicon-envelope"></span> <a href="mailto:clienteslopd@agdata.es?subject=Consulta LOPD">Realizar consulta LOPD a AGDATA</a></li>
+			</ul>
+		</div>
+		<div class="col-md-6">
+			<h2>Tareas pendientes</h2>
+			<ul>
+				<li><span class="glyphicon glyphicon-pushpin"></span> <a href="user/pending"><font style="color: red">Tareas LOPD pendientes</font></a></li>
 			</ul>
 		</div>
 	</div>
