@@ -18,6 +18,10 @@
             padding-top: 10px;
             padding-bottom: 10px;
         }
+        form.form-horizontal {
+            width: 600px;
+            margin-left: auto;
+        }
 	</style>
 </head>
 <body>
